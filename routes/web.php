@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DummyController;
 use App\Http\Controllers\BikeController;
+use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -30,3 +31,4 @@ Route::put('put', [DummyController::class, 'put'])->name('dummy-put');
 Route::any('any', [DummyController::class, 'any'])->name('dummy-any');
 
 Route::resource('bike', BikeController::class);
+Route::resource('persona', PersonaController::class);

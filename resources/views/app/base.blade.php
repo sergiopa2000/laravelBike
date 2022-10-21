@@ -19,6 +19,9 @@
                     <li class="nav-item {{$activeBike ?? ''}}">
                         <a class="nav-link" href="{{ url('bike') }}">Bike</a>
                     </li>
+                    <li class="nav-item {{$activePersona ?? ''}}">
+                        <a class="nav-link" href="{{ url('persona') }}">Persona</a>
+                    </li>
                 </ul>
             </div>
         </nav>

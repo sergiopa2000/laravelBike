@@ -6,30 +6,36 @@
             <thead>
                 <tr>
                     <th scope="col"># id</th>
+                    <th scope="col">dni</th>
                     <th scope="col">name</th>
+                    <th scope="col">apellidos</th>
+                    <th scope="col">telefono</th>
                     <th scope="col">delete</th>
                     <th scope="col">edit</th>
                     <th scope="col">show</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($bikes as $bike)
+                @foreach($personas as $persona)
                 <tr>
-                    <td>{{ $bike->id }}</td>
-                    <td>{{ $bike->name }}</td>
+                    <td>{{ $persona->id }}</td>
+                    <td>{{ $persona->dni }}</td>
+                    <td>{{ $persona->nombre }}</td>
+                    <td>{{ $persona->apellidos }}</td>
+                    <td>{{ $persona->telefono }}</td>
                     <td><a href="#"
                           class="deleteRow"
-                          data-name="{{ $bike->name }}"
-                          data-url="{{ url('bike/' . $bike->id) }}">delete</a></td>
-                    <td><a href="{{ url('bike/' . $bike->id . '/edit') }}">edit</a></td>
-                    <td><a href="{{ url('bike/' . $bike->id) }}">show</a></td>
+                          data-name="{{ $persona->dni }}"
+                          data-url="{{ url('persona/' . $persona->id) }}">delete</a></td>
+                    <td><a href="{{ url('persona/' . $persona->id . '/edit') }}">edit</a></td>
+                    <td><a href="{{ url('persona/' . $persona->id) }}">show</a></td>
                 </tr>
                  @endforeach
             </tbody>
         </table>
     </div>
       <div class="row">
-        <a href="{{ url('bike/create') }}" class="btn btn-success">add Bike</a>
+        <a href="{{ url('persona/create') }}" class="btn btn-success">add Bike</a>
     </div>
     <form action="" method="post" id="deleteForm">
       @csrf
